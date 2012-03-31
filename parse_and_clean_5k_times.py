@@ -1,13 +1,16 @@
 from BeautifulSoup import BeautifulSoup
 import codecs
 
+
 def unescape(s):
+  """ unescape some html characters that are found in the company names """
   s = s.replace("&lt;", "<")
   s = s.replace("&gt;", ">")
   s = s.replace("&amp;", "&")
   return s
 
 def parse_time(t):
+  """ convert the times (HH:MM:SS) into seconds """
   time_components = t.split(':')
   if len(time_components) == 2:
     secs = (int(time_components[0]) * 60) + int(time_components[1])
@@ -15,22 +18,19 @@ def parse_time(t):
     secs = (int(time_components[0]) * 3600) + (int(time_components[1]) * 60) + int(time_components[2])
   return str(secs)
 
+# input and output files
 input_file = 'data/results_2012.html'
 output_file = 'data/results_2012.tsv'
 output_file_handle = codecs.open(output_file, 'w', 'utf-8')
 
+# open the file, find the table and its rows. Iterate through the rows
 results = open(input_file,'r').read()
 soup = BeautifulSoup(results)
 results_tab=soup.find('table',{'id':'results'})
 rows=results_tab.findAll('tr')
-# iterate through the rows
 
 # skipping row 1 because its the header row.
-
 for row in rows[1:]:
-
-  # iterate through the fields in each row
-
   cols = row.findAll('td')
   overall_place = cols[0].text
   gender_place = cols[1].text
