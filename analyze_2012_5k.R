@@ -68,7 +68,10 @@ qplot(all_team_summary,aes(x=mean_time_in_minutes.x,y=mean_time_in_minutes.y))
 plot(ecdf(raw_data$minutes),col="red",verticals=TRUE,main="ecdf of 5k finishers(red) and CBSi (orange)",sub="minutes")
 lines(ecdf(cbsi_runners$minutes),col="orange")
 
-
+#ecdf in ggplot2
+#from http://stackoverflow.com/questions/3544002/easier-way-to-plot-the-cumulative-frequency-distribution-in-ggplot
+mydata<-raw_data$minutes
+qplot(unique(mydata), ecdf(mydata)(unique(mydata))*length(mydata), geom='step')
 
 
 
