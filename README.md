@@ -6,7 +6,7 @@ The data was scraped from the [results] page. Since the results page seems to be
 The times provided were in H:M:S, I converted the data to seconds and to fractional minutes (to 2 places). I also cleaned up a little unicode in the participant/company names.
 
 ![densityplot](http://www.neilkodner.com/images/littlesnapper/5k_density_plot.png)
-
+![ecdf](http://www.neilkodner.com/images/littlesnapper/5k_ecdf.png)
 
 ![boxplot](http://www.neilkodner.com/images/littlesnapper/2012_5k_boxplot.png)
 [results]: http://results.mercedesbenzcorporaterun.com/results/search.php?sub_event_id=226610&series_year=2012
