@@ -7,6 +7,6 @@ The times provided were in H:M:S, I converted the data to seconds and to fractio
 
 ![densityplot](http://www.neilkodner.com/images/littlesnapper/5k_density_plot.png)
 ![ecdf](http://www.neilkodner.com/images/littlesnapper/5k_ecdf.png)
-
+![teamplot](http://getfile0.posterous.com/getfile/files.posterous.com/neilkod/puIfypodktlnBHAlwApHfDtuJfdmIFHtmIauInbBjEusqpudclHhGlemhsFb/image.jpg.scaled1000.jpg)
 ![boxplot](http://www.neilkodner.com/images/littlesnapper/2012_5k_boxplot.png)
 [results]: http://results.mercedesbenzcorporaterun.com/results/search.php?sub_event_id=226610&series_year=2012
